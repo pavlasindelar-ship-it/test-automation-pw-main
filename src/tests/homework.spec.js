@@ -52,4 +52,5 @@ test("homework", async ({ page }) => {
     //Playwright Registrace
     await page.getByText("Zaregistrovat").click();
     await page.getByText("Zaregistrovat").screenshot({ path : "src/tests/homework/registrace_pw.png"});
+    console.log("Good job!");
 });

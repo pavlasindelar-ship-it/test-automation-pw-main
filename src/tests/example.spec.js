@@ -1,4 +1,6 @@
+require("dotenv").config();
 import { expect, test } from "@playwright/test";
+
 
 test("should open login page", async ({ page }) => {
     await page.goto("https://team8-2022brno.herokuapp.com/prihlaseni");
@@ -52,6 +54,13 @@ test("lesson 4", async ({ page }) => {
 
 });
 
+async function login(page, username, password) {
+    await page.goto("/prihlaseni");
+    await page.getByLabel("Email").fill(username);
+    await page.getByLabel("Heslo").fill(password);
+    await page.getByRole('button', { name: 'Přihlásit' }).click();
+
+};
 
 
 

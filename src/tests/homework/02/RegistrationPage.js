@@ -2,7 +2,7 @@ import { UrlPage } from "./UrlPage.js";
 
 export class RegistrationPage extends UrlPage {
 
-        constructor(page) {
+    constructor(page) {
         
         super(page);    
 

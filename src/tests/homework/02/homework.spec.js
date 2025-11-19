@@ -15,13 +15,13 @@ function createNewEmail() {
     return EMAIL_WITHOUT_DOMAIN + Date.now() + EMAIL_DOMAIN;
 }
 
-test.describe("login page", () => {
+test.describe("registration page", () => {
 
     let registrationPageObject;
     
     test.beforeEach(async ({ page }) => {
         registrationPageObject = new RegistrationPage(page);
-        registrationPageObject.goto();
+        registrationPageObject.openPage();
     }); 
 
     test("valid registration", { tag: ["@happyway", "@valid"] }, async ({ page }) => {

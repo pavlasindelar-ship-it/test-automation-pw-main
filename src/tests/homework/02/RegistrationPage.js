@@ -1,12 +1,16 @@
-export class RegistrationPage {
+import { UrlPage } from "./UrlPage.js";
+
+export class RegistrationPage extends UrlPage {
 
         constructor(page) {
+        
+        super(page);    
+
         this.nameInput = page.locator("input#name");
         this.emailInput = page.locator("input#email");
         this.passwordInput = page.locator("input#password");
         this.confirmInput = page.locator("input#password-confirm");
         this.submitButton = page.locator(".btn-primary");
-        this.pwPage = page;
     }
 
     async fillForm({ name, email, userPassword, confirmPassword }) {
@@ -24,9 +28,5 @@ export class RegistrationPage {
         await this.fillForm(userData);
         await this.submit();
     }
-
-    async goto() {
-        await this.pwPage.goto("https://team8-2022brno.herokuapp.com/registrace");
-    }
-    
+   
 }

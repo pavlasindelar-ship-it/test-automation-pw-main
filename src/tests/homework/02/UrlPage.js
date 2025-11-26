@@ -15,7 +15,7 @@ const {
     EMAIL_DOMAIN,
 }= process.env
 
-export class CreateNewEmail {
+export class EmailGenerator {
 
     createNewEmail() {
     return EMAIL_WITHOUT_DOMAIN + Date.now() + EMAIL_DOMAIN;

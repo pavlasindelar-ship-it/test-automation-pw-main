@@ -1,5 +1,4 @@
-import { UrlPage } from "./UrlPage.js";
-import { CreateNewEmail } from "./CreateNewEmail.js";
+import { UrlPage, CreateNewEmail } from "./UrlPage.js";
 
 export class RegistrationPage extends UrlPage {
 

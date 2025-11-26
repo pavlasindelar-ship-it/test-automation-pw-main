@@ -1,10 +1,13 @@
 import { UrlPage } from "./UrlPage.js";
+import { CreateNewEmail } from "./CreateNewEmail.js";
 
 export class RegistrationPage extends UrlPage {
 
     constructor(page) {
         
-        super(page);    
+        super(page); 
+        
+        this.emailGenerator = new CreateNewEmail();
 
         this.nameInput = page.locator("input#name");
         this.emailInput = page.locator("input#email");
